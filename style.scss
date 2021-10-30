@@ -1,4 +1,5 @@
 @import "./Variables/variables";
+@import "./Variables/mixins";
 
 @font-face {
     font-family: 'Shrikhand-Regular';
@@ -32,30 +33,91 @@
                             url('Roboto-Light.ttf') format('truetype'),
                             url('Roboto-Light.svg#cac_Raleway') format('svg');}
 
-@media screen and (max-width: 768px){
+
+
 
 header{
+    @include header-config;
     h1{
         font-family: $logofont;
     }
     #local{
-        font-family: $font-text1;
-        background-color: $background-color;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        @include icon-local
+    }
+    .fa-map-marker-alt
+    {
+        position: relative;
+        right: 20px;
+        font-size: large;
     }
     h2{
         font-family: $font-text-b;
+        font-size: 25px;
+        width: 250px;
+        position: relative;
+        left: 100px;
     }
     p{
         font-family: $font-text2;
+        font-size: 20px;
     }
     .button{
-    font-family: $font-text-b;
+    @include click-button;
+    }
+
+    .back-header{
+        background-color: $second-background-color;
+        width: 500px;
+        height: 350px;
+        position: relative;
+        right: 12px;
+    }
 }
+
+section{
+    h3{
+        font-family: $font-text-b;
+        font-size: 20px;
+    }
+    .filtre-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 300px;
+    }
+
+    .filtre{
+    @include filtre-config
+    }    
+
+    .number{
+        color: #FFF;
+        font-family: $font-text2;
+        background-color: $primary-color;
+        padding-right: 5px;
+        padding-left: 5px;
+        padding-top: 2.5px;
+        border-radius: 50px;
+        position: relative;
+        right: 130px;
+        }
+
+        .fa-mobile-alt{
+            @include icon-config;
+        }
+
+        .fa-list-ul{
+            @include icon-config;
+        }
+        
+        .fa-store{
+            @include icon-config;
+        }
+
 }
 
 
-}
+
+
 
 

@@ -22,24 +22,140 @@
   src: url("Roboto-Light") format("embedded-opentype"), url("Roboto-Light.woff") format("woff"), url("Roboto-Light.ttf") format("truetype"), url("Roboto-Light.svg#cac_Raleway") format("svg");
 }
 
-@media screen and (max-width: 768px) {
-  header h1 {
-    font-family: "Shrikhand-Regular";
-  }
-  header #local {
-    font-family: "Roboto";
-    background-color: #eeecec;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-  header h2 {
-    font-family: "Roboto Bold";
-  }
-  header p {
-    font-family: "Roboto Light";
-  }
-  header .button {
-    font-family: "Roboto Bold";
-  }
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 5px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+header h1 {
+  font-family: "Shrikhand-Regular";
+}
+
+header #local {
+  font-family: "Roboto";
+  background-color: #dddada;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  right: 50px;
+  width: 500px;
+  -webkit-box-shadow: 5px 5px 20px #b4b3b3;
+          box-shadow: 5px 5px 20px #b4b3b3;
+}
+
+header .fa-map-marker-alt {
+  position: relative;
+  right: 20px;
+  font-size: large;
+}
+
+header h2 {
+  font-family: "Roboto Bold";
+  font-size: 25px;
+  width: 250px;
+  position: relative;
+  left: 100px;
+}
+
+header p {
+  font-family: "Roboto Light";
+  font-size: 20px;
+}
+
+header .button {
+  font-family: "Roboto Bold";
+  color: #FFF;
+  background-color: #9356DC;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  padding-bottom: 20px;
+  padding-top: 20px;
+  position: relative;
+  margin-left: 100px;
+  margin-right: 100px;
+  border: solid;
+  border-radius: 50px;
+}
+
+header .back-header {
+  background-color: #fcf5f5;
+  width: 450px;
+  height: 350px;
+  position: relative;
+  right: 12px;
+}
+
+section h3 {
+  font-family: "Roboto Bold";
+  font-size: 20px;
+}
+
+section .filtre-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 300px;
+}
+
+section .filtre {
+  font-family: "Roboto Bold";
+  font-size: 15px;
+  background-color: #fcf5f5;
+  -webkit-box-shadow: 10px 10px 10px #dddada;
+          box-shadow: 10px 10px 10px #dddada;
+  border-radius: 30px;
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: 200px;
+  padding-left: 120px;
+  padding-right: 70px;
+  left: 20px;
+}
+
+section .number {
+  color: #FFF;
+  font-family: "Roboto Light";
+  background-color: #9356DC;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-top: 2.5px;
+  border-radius: 50px;
+  position: relative;
+  right: 130px;
+}
+
+section .fa-mobile-alt {
+  color: gray;
+  font-size: 20px;
+  position: relative;
+  right: 70px;
+}
+
+section .fa-list-ul {
+  color: gray;
+  font-size: 20px;
+  position: relative;
+  right: 70px;
+}
+
+section .fa-store {
+  color: gray;
+  font-size: 20px;
+  position: relative;
+  right: 70px;
 }
 /*# sourceMappingURL=style.css.map */
