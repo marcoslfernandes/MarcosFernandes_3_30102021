@@ -1,0 +1,53 @@
+@mixin header-config{
+    display: flex;
+    padding-left: 5px;
+    flex-direction: column;
+    text-align: center;
+}
+
+@mixin icon-local {
+    font-family: $font-text1;
+    background-color: $background-color;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    right: 50px;
+    width: 500px;
+    box-shadow: 5px 5px 20px rgb(180, 179, 179);
+}
+
+@mixin click-button{
+font-family: $font-text-b;
+color: #FFF;
+background-color: $primary-color;
+background-image: linear-gradient(to bottom right,$secondary-color,$primary-color);
+padding-bottom: 20px;
+padding-top: 20px;
+position: relative;
+margin-left: 100px;
+margin-right: 100px;
+border: solid;
+border-radius: 50px;
+}
+
+@mixin filtre-config{
+    font-family: $font-text-b;
+    font-size: 15px;
+    background-color: $second-background-color;
+    box-shadow: 10px 10px 10px $background-color;
+    border-radius: 30px;
+    position: relative;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width: 200px;
+    padding-left: 120px;
+    padding-right: 70px;
+    left: 20px;
+}
+
+@mixin icon-config{
+    color: gray;
+    font-size: 20px;
+    position: relative;
+    right: 70px;
+}
