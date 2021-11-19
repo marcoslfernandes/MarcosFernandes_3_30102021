@@ -1,5 +1,6 @@
-@import "./Variables/variables";
-@import "./Variables/mixins";
+@import "./Outils/variables";
+@import "./Outils/Mixins";
+@import "./Outils/Bases";
 
 @font-face {
     font-family: 'Shrikhand-Regular';
@@ -35,84 +36,472 @@
 
 
 
+/* Accueil */
+
 
 header{
-    @include header-config;
-    h1{
-        font-family: $logofont;
-    }
-    #local{
-        @include icon-local
-    }
-    .fa-map-marker-alt
-    {
-        position: relative;
-        right: 20px;
-        font-size: large;
-    }
-    h2{
-        font-family: $font-text-b;
-        font-size: 25px;
-        width: 250px;
-        position: relative;
-        left: 100px;
-    }
-    p{
-        font-family: $font-text2;
-        font-size: 20px;
-    }
-    .button{
-    @include click-button;
-    }
-
-    .back-header{
-        background-color: $second-background-color;
-        width: 500px;
+@include header-config;
+ h1{
+font-family: $logofont;
+position: relative;
+@include tablet{
+    font-size: 40px;
+}
+}
+.back-header{
+    background-color: $second-background-color;
+    position: relative;
+    @include mobile{
+        width: 375px;
         height: 350px;
-        position: relative;
-        right: 12px;
     }
+    
 }
 
-section{
-    h3{
-        font-family: $font-text-b;
-        font-size: 20px;
+
+#local{
+        @include icon-local;
+     @include mobile{
+        width: 450px;
+        padding-bottom: 20px;
+        position: relative;
+        right: 30px;
+        bottom: 10px;
+        padding-top: 20px;
+                          }
+         @include tablet{
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: 25px;
     }
-    .filtre-container{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        height: 300px;
+    @include ordi{
+        height: 40px;
     }
 
-    .filtre{
-    @include filtre-config
+    .fa-map-marker-alt
+        {
+            position: relative;
+            right: 20px;
+            font-size: large;
+        }
+
+    }
+
+    h2{
+        @include htitre;
+        @include mobile{
+            left: 60px;
+            top: 10px;
+            width: 250px;
+        }
+    }
+
+    p{
+        @include paragraph;
+    }
+
+    }
+
+
+    .button{
+        @include click-button;
+        @include mobile{
+            left: -40px;
+            top: 10px;
+            width: 270px;
+        }
+        @include tablet{
+            left: 150px;
+            bottom: 10px;
+            width: 270px;
+        }
+        @include ordi{
+            left: 470px;
+            bottom: 10px;
+            width: 270px;
+        }
+        }
+
+
+    h3{
+        @include htitre;
+        @include mobile{
+            left: 20px;
+        }
+        @include tablet{
+            left: 300px;
+        }
+        @include ordi{
+            left: 640px;
+        }
+    }
+
+    section{
+
+     a{
+         text-decoration: none;
+         color: black;
+         :hover{
+            background-color: #e3dbec; 
+            transition-duration: 500ms;
+         }
+        
+     }
+
+        .filtre-container{
+            display: flex;
+            position: relative;
+            @include mobile{
+                flex-direction: column;
+                justify-content: space-around;
+                left: 40px;
+            }
+            @include tablet{
+                flex-direction: column;
+                justify-content: space-around;
+                left: 230px;
+            }
+            @include ordi{
+                flex-direction: row;
+                left: 20px;
+            }
+        }
+    
+        .filtre{
+            @include filtre-config;
+  
+            }   
+
+            .number{
+ @include number-config;
+        }
+
+       
+            .texte-filtre{
+      
+                width: 210px;
+                position: relative;
+                bottom: 15px;
+                right: 20px;
+                font-size: 18px;
+            }
+
+            .fa-mobile-alt{
+                @include icon-config;
+            }
+    
+            .fa-list-ul{
+                @include icon-config;
+            }
+            
+            .fa-store{
+                @include icon-config;
+            } 
+
     }    
 
-    .number{
-        color: #FFF;
-        font-family: $font-text2;
-        background-color: $primary-color;
-        padding-right: 5px;
-        padding-left: 5px;
-        padding-top: 2.5px;
-        border-radius: 50px;
+main{
+  
+
+        background-color: $second-background-color;
+        display: flex;
         position: relative;
-        right: 130px;
-        }
-
-        .fa-mobile-alt{
-            @include icon-config;
-        }
-
-        .fa-list-ul{
-            @include icon-config;
+        padding-bottom: 40px;
+        a{
+            text-decoration: none;
+            color: black;
         }
         
-        .fa-store{
-            @include icon-config;
+        @include mobile{
+            flex-direction: column;
+            top: 70px;}
+        @include tablet{
+                flex-direction: column;
+                top: 70px;}
+                @include ordi{
+                    flex-direction: row;
+                    top: 70px;
+                padding-bottom: 100px;}                     
+
+}
+
+
+
+figure{
+    @include fig-config;
+    @include mobile{
+        width: 340px;
+    right: 20px;}
+    @include tablet{
+        width: 340px;
+    left: 160px;}
+
+    @include ordi{
+    height: 120;
+    width: 180px;
+    left: 40px;
+    top: 80px;} 
+
+    &:active{
+        .heart{
+            display: none;
         }
+        .heart2{
+            display: block;
+ 
+            }
+    }
+
+img{
+    @include img-config;
+    @include mobile{
+        height: 200px;
+        width: 340px;
+    }
+
+    @include tablet{
+        height: 200px;
+        width: 340px;
+    }
+
+    @include ordi{
+        height: 120px;
+        width: 180px;
+    }
+}
+
+}
+
+
+
+   
+.new{
+    font-family: $font-text-b;
+    font-size: 14px;
+    position: absolute;
+    background-color: $third-color;
+    color: #0a9774;
+    width: 70px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    @include mobile{
+        bottom: 250px;
+        left: 250px;
+    }
+    @include tablet{
+        bottom: 250px;
+        left: 250px;
+    }
+
+    @include ordi{
+        bottom: 150px;
+        left: 90px;
+    }
+}
+
+
+
+.figbold{
+    @include caption-bold;
+    @include ordi{
+        font-size: 15px;
+    }
+}
+
+.light{
+    @include caption-light;
+    position: relative;
+    left: 10px;
+    @include ordi{
+        font-size: 12px;
+    }
+}
+
+
+
+.fa-heart{
+position: relative;
+font-size: 30px;
+@include mobile{
+    left: 300px;
+bottom: 20px;
+}
+@include tablet{
+    left: 300px;
+bottom: 50px;
+}
+@include ordi{
+    left: 150px;
+bottom: 30px;
+font-size: 20px;
+}
+}
+
+.heart2{
+    display: none;
+    color:  $primary-color;
+}
+
+ 
+
+    footer{
+
+        position: relative;
+        background-color: rgb(59, 58, 58);
+        @include mobile{
+        top: 30px;
+        height: 180px;
+        }
+
+        @include tablet{
+            top: 30px;
+            height: 120px;
+            }
+    }
+
+    h6{
+        font-family: $logofont;
+        color: #FFF;
+        font-size: 20px;
+        @include mobile{
+   text-align: left;
+   position: relative;
+   top: 10px;
+   left: 35px;
+        }
+
+        @include tablet{
+            text-align: center;
+            position: relative;
+            top: 10px;
+            left: 35px;
+                 }
+    }
+
+    ul{
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        @include mobile{
+            height: 100px;
+            flex-direction: column;
+            bottom: 10px;
+        }
+        @include tablet{
+            right: 25px;
+        }
+    }
+    ul li{
+        list-style: none;
+        font-family: $font-text2;
+        font-size: 18px;
+        color: #FFF;
+    }
+
+    .foot{
+        padding-bottom: 15px;
+    }
+
+    .fa-hands-helping{
+        padding-right: 5px;
+    }
+    
+    .fa-utensils{
+        padding-right: 10px;
+    }
+
+/* Menu */
+
+.fa-arrow-left{
+    @include mobile{
+    position: relative;
+    right: 150px;
+    top: 52px;
+    font-size: 20px;
+    }
+}
+
+.menu{
+    position: relative;
+    bottom: 30px;
+
+    img{
+        position: relative;
+        right: 20px;
+        bottom: 10px;
+        width: 400px;
+        @include tablet{
+            left: 180px;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+        }
+        @include ordi{
+            left: 500px;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+        }
+
+    }
+}
+
+.menumain{
+    position: relative;
+    top: -60px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    height: 1350px;
+    @include ordi{
+        height: 420px;
+        width: 1300px;
+        left: 70px;
+    }
+
+h4{
+    font-family: $logofont;
+    font-size: 25px;
+    padding-left: 10px;
+    @include tablet{
+        margin-left: 250px;
+    }
+    @include ordi{
+       margin-top: 150px;
+       margin-left: 10px;
+    }
+
+}
+
+.fa-heart{
+    position: relative;
+    bottom: 65px;
+    @include tablet{
+        display: none;
+    }
+    @include ordi{
+        display: none;
+    }
+
+}
+
+h5{
+    font-family: $font-text2;
+    font-size: 18px;
+    border-bottom: solid $third-color;
+    width: 50px;
+    position: relative;
+    padding-bottom: 10px;
+    left: 10px;
+    bottom: 70px;
+    @include tablet{
+        top: -40px;
+        left: 340px;
+    }
+    @include ordi{
+        top: 20px;
+        left: 40px;
+        height: 15px;
+    }
+
 
 }
 
@@ -120,4 +509,133 @@ section{
 
 
 
+
+.choix{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 80px;
+    left: 10px;
+margin-bottom: 20px;
+background-color: #FFF;
+width: 340px;
+height: 70px;
+border-radius: 15px;
+padding-top: 10px;
+overflow: hidden;
+&:hover {
+
+    .circle{
+    right: 1px;
+}
+
+.fa-check-circle{
+    rotate: (45deg);
+}
+
+  
+}
+
+
+@include tablet{
+    left: 220px;
+    bottom: 50px;
+}
+@include ordi{
+    top: 100px;
+    left: -30px;
+ 
+}
+
+}
+
+
+.circle{
+
+    position: absolute;
+    right: -100px;
+    width: 30px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+      height: 80px;
+    margin-left: 15px;
+    padding-left: 50px;
+    top:-1px;
+    background-color: $third-color;
+    transition: 400ms all ease-out;
+    transition-duration: 500ms;
+  
+}
+
+
+}
+
+.fa-check-circle{
+    position: absolute;
+    top: 30px;
+    right: 32px;
+    color: #FFF;
+
+
+}
+
+.boldplat{
+    @include caption-bold
+  
+}
+
+.simpleplat{
+    @include caption-light;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.boldnum{
+    @include caption-bold;
+    font-size: 15px;
+    position: absolute;
+    left: 280px;
+    bottom: 30px;
+}
+
+.button{
+    text-align: center;
+    width: 200px;
+    height: 15px;
+    position: relative;
+    left: -15px;
+    top: -50px;
+       @include tablet{
+        left: 180px;
+    }
+    @include ordi{
+        left: -820px;
+        width: 400px;
+        top: -30px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    
+}
+
+
+
+.menufooter{
+    position: relative;
+    top: -80px;
+    height: 200px;
+    margin-bottom: -80px;
+    margin-top: -50px;
+
+    h6{
+        @include tablet{
+        position: relative;
+        left: -10px;
+    }
+    }
+
+
+
+}
 
