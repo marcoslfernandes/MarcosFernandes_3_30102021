@@ -1,0 +1,121 @@
+
+@mixin header-config{
+    display: flex;
+    padding-left: 5px;
+    flex-direction: column;
+    text-align: center;
+}
+
+@mixin icon-local {
+    font-family: $font-text1;
+    background-color: $background-color;
+    text-align: center;
+    position: relative;
+}
+
+@mixin click-button{
+font-family: $font-text-b;
+color: #FFF;
+background-color: $primary-color;
+background-image: linear-gradient(to bottom right,$secondary-color,$primary-color);
+padding-bottom: 20px;
+padding-top: 20px;
+position: relative;
+margin-left: 100px;
+margin-right: 100px;
+border: solid;
+border-radius: 50px;
+width: 350px;
+}
+
+@mixin filtre-config{
+    font-family: $font-text-b;
+    font-size: 14px;
+    background-color: $second-background-color;
+    box-shadow: 10px 10px 10px $background-color;
+    border-radius: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 10px;
+    width: 150px;
+    height: 30px;
+    padding-left: 120px;
+    padding-right: 70px;
+    position: relative;
+    right: 20px;
+}
+
+@mixin number-config{
+    color: #FFF;
+    font-family: $font-text2;
+    font-size: 18px;
+    background-color: $primary-color;
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-top: 2.5px;
+    border-radius: 50px;
+    position: relative;
+    right: 130px;
+    bottom: -10px;
+}
+
+@mixin icon-config{
+    color: gray;
+    font-size: 20px;
+    position: relative;
+    right: 80px;
+    top: 10px;
+}
+
+@mixin htitre{      font-family: $font-text-b;
+    font-size: 25px;
+    position: relative;}
+
+    @mixin paragraph {
+        font-family: $font-text2;
+        font-size: 20px;
+        color: gray;
+        
+    }
+
+    @mixin fig-config {
+        background-color: #FFF;
+        border-radius: 15px;
+        position: relative;
+    }
+
+    @mixin img-config{
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        object-fit: cover;
+    }
+
+    @mixin caption-bold{
+        font-family: $font-text-b;
+        font-size: 20px;
+        position: relative;
+        padding-left: 10px;
+        padding-top: 5px;
+    }
+
+    @mixin caption-light{
+        font-family: $font-text2;
+        font-size: 18px;
+        padding-top: 5px;
+    }
+
+
+@mixin ordi{ @media screen and(min-width: 992px) {@content
+    
+}}
+
+@mixin mobile{ @media screen and(max-width: 767px){@content}}
+
+@mixin tablet{@media screen and(min-width: 768px){@content}}
+
+
+
+
+    
+
+
