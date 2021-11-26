@@ -41,12 +41,12 @@
 .loader-bloc{position: fixed;
     width: 100%;
  height: 100%;
-    background: gray;
+    background: rgb(156, 154, 154);
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 90%;
     z-index: 100;
+    opacity: 90%;
  animation: loader 3s;
  visibility: hidden;
     }
@@ -63,7 +63,7 @@
 
     .load{
         position: relative;
-        right: 530px;
+        right: 550px;
         bottom: 300px;
         z-index: 105;
  
@@ -106,17 +106,52 @@ header{
  h1{
 font-family: $logofont;
 position: relative;
+box-shadow: 5px 5px 5px rgb(189, 187, 187);
+height: 10px;
+width: 450px;
+padding-bottom: 40px;
+bottom: 10px;
+right: 10px;
+text-align: center;
+
+@include mobile6{
+    right: 40px;
+}
 
 @include tablet{
     font-size: 40px;
+    height: 50px;
+    width: 800px;
+    padding-top: 10px;
+}
+@include ordi{
+    width: 1500px;
 }
 }
 .back-header{
     background-color: $second-background-color;
     position: relative;
     @include mobile{
-        width: 375px;
+       right: 5px;
+        width:410px;
         height: 350px;
+    }
+
+    @include mobile6{
+        right: 15px;
+    }
+
+    @include mobile5{
+        left: -30px;
+    }
+
+    @include tablet{
+        right: 10px;
+        padding-bottom: 10px;
+    }
+
+    @include ordi{
+        width: 1500px;
     }
     
 }
@@ -136,16 +171,19 @@ a{
         padding-bottom: 20px;
         position: relative;
         right: 30px;
-        bottom: 10px;
+        bottom: 30px;
         padding-top: 20px;
                           }
          @include tablet{
-        padding-top: 15px;
-        padding-bottom: 15px;
+             bottom: 35px;
+        padding-top: 25px;
+        padding-bottom: 25px;
         font-size: 25px;
     }
     @include ordi{
         height: 40px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 
     .fa-map-marker-alt
@@ -160,14 +198,24 @@ a{
     h2{
         @include htitre;
         @include mobile{
-            left: 60px;
-            top: 10px;
+            left: 70px;
+            top: 2px;
             width: 250px;
+        }
+        @include tablet{
+            bottom: 20px;
         }
     }
 
     p{
         @include paragraph;
+        position: relative;
+        @include mobile5{width: 300px;
+        
+            right: -35px;}
+            @include tablet{
+                top: -20px;
+            }
     }
 
     }
@@ -185,7 +233,13 @@ a{
         }
 
         @include mobile{
-            left: -40px;
+            left: -20px;
+            top: 10px;
+            width: 270px;
+        }
+
+        @include mobile5{
+            left: -50px;
             top: 10px;
             width: 270px;
         }
@@ -196,7 +250,7 @@ a{
             width: 270px;
         }
         @include ordi{
-            left: 470px;
+            left: 520px;
         }
       
        
@@ -206,7 +260,7 @@ a{
     h3{
         @include htitre;
         @include mobile{
-            left: 20px;
+            left: 30px;
         }
         @include tablet{
             left: 300px;
@@ -243,8 +297,13 @@ a{
             @include mobile{
                 flex-direction: column;
                 justify-content: space-around;
+                left: 60px;
+            }
+            @include mobile6{
                 left: 40px;
             }
+
+
             @include tablet{
                 flex-direction: column;
                 justify-content: space-around;
@@ -258,6 +317,9 @@ a{
     
         .filtre{
             @include filtre-config;
+            @include mobile5{
+                width: 100px;
+            }
   
             }   
 
@@ -273,18 +335,30 @@ a{
                 bottom: 15px;
                 right: 20px;
                 font-size: 18px;
+                @include mobile5{
+                    right: 50px;
+                }
             }
 
             .fa-mobile-alt{
                 @include icon-config;
+                @include mobile5{
+                    right: 120px;
+                }
             }
     
             .fa-list-ul{
                 @include icon-config;
+                @include mobile5{
+                    right: 120px;
+                }
             }
             
             .fa-store{
                 @include icon-config;
+                @include mobile5{
+                    right: 120px;
+                }
             } 
 
     }    
@@ -295,7 +369,7 @@ main{
         background-color: $second-background-color;
         display: flex;
         position: relative;
-        padding-bottom: 50px;
+        padding-bottom: 70px;
         a{
             text-decoration: none;
             color: black;
@@ -319,8 +393,16 @@ main{
 figure{
     @include fig-config;
     @include mobile{
+        width: 360px;
+    right: 10px;}
+    @include mobile6{
+        left: -20px;
         width: 340px;
-    right: 20px;}
+    }
+    @include mobile5{
+        left: -30px;
+        width: 300px;
+    }
     @include tablet{
         width: 340px;
     left: 160px;}
@@ -338,9 +420,16 @@ img{
     @include img-config;
     @include mobile{
         height: 200px;
+        width: 360px;
+    }
+    @include mobile6{
+        height: 200px;
         width: 340px;
     }
-
+    @include mobile5{
+        
+        width: 300px;
+    }
     @include tablet{
         height: 200px;
         width: 340px;
@@ -418,7 +507,17 @@ figcaption{
     padding-bottom: 5px;
     @include mobile{
         bottom: 250px;
+        left: 270px;
+    }
+
+    @include mobile6{
+        bottom: 250px;
         left: 250px;
+    }
+
+    @include mobile5{
+        bottom: 250px;
+        left: 200px;
     }
     @include tablet{
         bottom: 250px;
@@ -435,6 +534,7 @@ figcaption{
 
 .figbold{
     @include caption-bold;
+
     @include ordi{
         font-size: 15px;
     }
@@ -456,9 +556,15 @@ position: relative;
 font-size: 30px;
 
 @include mobile{
-    left: 300px;
+    left: 360px;
 bottom: 20px;
 }
+
+@include mobile6{
+    left: 330px;
+bottom: 20px;
+}
+
 @include tablet{
     left: 300px;
 bottom: 50px;
@@ -475,7 +581,11 @@ font-size: 20px;
     font-size: 30px;
     @include mobile{
         left: 300px;
-    bottom: 20px;
+    bottom: 40px;
+    }
+    @include mobile5{
+        left: 250px;
+    bottom: 40px;
     }
     @include tablet{
         left: 300px;
@@ -499,7 +609,11 @@ font-size: 20px;
 
         @include mobile{
             left: 300px;
-        bottom: 20px;
+        bottom: 40px;
+        }
+        @include mobile5{
+            left: 250px;
+        bottom: 40px;
         }
         @include tablet{
             left: 300px;
@@ -520,10 +634,10 @@ font-size: 20px;
     footer{
 
         position: relative;
-        background-color: rgb(59, 58, 58);
+        background-color: rgb(58, 57, 57);
         @include mobile{
-        top: 30px;
-        height: 180px;
+        top: 20px;
+        height: 200px;
         }
 
         @include tablet{
@@ -563,13 +677,14 @@ font-size: 20px;
         @include tablet{
             right: 25px;
         }
-    }
-    ul li{
+   
+    li{
         list-style: none;
         font-family: $font-text2;
         font-size: 18px;
+        margin-bottom: 10px;
         color: #FFF;
-    }
+    } }
 
     .foot{
         padding-bottom: 15px;
@@ -585,12 +700,17 @@ font-size: 20px;
 
 /* Menu */
 
+
+
 .fa-arrow-left{
     position: relative;
     font-size: 25px;
-    right: 50px;
+    right: 90px;
     @include ordi{
         right: 80px;
+    }
+    @include mobile5{
+        right: 50px;
     }
 
 
@@ -602,14 +722,23 @@ font-size: 20px;
 
     h1{
         position: relative;
-        padding-top: 10px;
+        padding-top: 30px;
+        padding-bottom: 40px;
+        @include tablet{
+            box-shadow: none;
+            height: 30px;
+        }
+        @include mobile5{
+            right: 70px;
+        }
     }
 
     img{
         position: relative;
         right: 20px;
-        bottom: 10px;
-        width: 400px;
+        bottom: 30px;
+        width: 440px;
+        height: 300px;
         @include tablet{
             left: 180px;
             border-top-left-radius: 30px;
@@ -628,21 +757,24 @@ font-size: 20px;
 
 .menumain{
     position: relative;
-    top: -60px;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    height: 1350px;
+    top: -95px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    height: 1400px;
     @include ordi{
         height: 420px;
-        width: 1300px;
-        left: 70px;
+        width: 1350px;
+        left: 50px;
     }
 
 
 h4{
     font-family: $logofont;
     font-size: 25px;
-    padding-left: 10px;
+    padding-left: 30px;
+    @include mobile6{
+        padding-left: 20px;
+    }
     @include tablet{
         margin-left: 250px;
     }
@@ -657,7 +789,10 @@ h4{
     position: relative;
     bottom: 65px;
 
-
+    @include mobile5{
+        left: 280px;
+   
+    }
     @include tablet{
         display: none;
     }
@@ -676,6 +811,12 @@ h5{
     padding-bottom: 10px;
     left: 10px;
     bottom: 70px;
+    @include mobile{
+        left: 40px;
+    }
+    @include mobile6{
+        left: 20px;
+    }
     @include tablet{
         top: -40px;
         left: 340px;
@@ -725,7 +866,7 @@ animation-delay: 100ms;
     flex-direction: column;
     position: relative;
     bottom: 80px;
-    left: 10px;
+    left: 35px;
 margin-bottom: 20px;
 background-color: #FFF;
 width: 340px;
@@ -756,12 +897,23 @@ transition-property: all;
 
 .boldnum{
     left: 200px;
+    @include mobile5{
+        left: 180px;
+    }
 }
 
 .boldplat{
     width: 190px;
 }
   
+}
+@include mobile6{
+    left: 15px;
+}
+
+@include mobile5{
+   left: 10px;
+    width: 300px;
 }
 
 
@@ -802,6 +954,7 @@ transition-property: all;
 
 .fa-check-circle{
     position: absolute;
+    font-size: 20px;
     top: 30px;
     right: 32px;
     color: #FFF;
@@ -817,6 +970,9 @@ transition-property: all;
     transition-timing-function: ease-in;
     transition-duration: 1000ms;
     cursor: pointer;
+    @include mobile5{
+        font-size: 18px;
+    }
 
   
 }
@@ -834,6 +990,9 @@ transition-property: all;
     transition-timing-function: ease-out;
     transition-duration: 0.4s;
     cursor: pointer;
+    @include mobile5{
+        font-size: 13px;
+    }
 
 }
 
@@ -842,11 +1001,15 @@ transition-property: all;
     font-size: 15px;
     position: absolute;
     left: 290px;
-    bottom: 10px;
+    top: 40px;
     transition: all;
     transition-timing-function: ease-out;
     transition-duration: 0.4s;
     cursor: pointer;
+    @include mobile5{
+        left: 250px;
+        bottom: 18px;
+    }
 }
 
 .btn{
@@ -862,18 +1025,23 @@ transition-property: all;
     width: 200px;
     height: 15px;
     position: relative;
-    left: -15px;
-    top: -50px;
+    left: -5px;
+    top: -30px;
        @include tablet{
         left: 180px;
+        top: 20px;
+    }
+    @include mobile5{
+        left: -40px;
     }
     @include ordi{
         left: -820px;
         width: 400px;
         top: -30px;
-        padding-right: 20px;
-        padding-left: 20px;
+        padding-right: 40px;
+        padding-left: 40px;
     }
+   
   
 }
 
@@ -893,16 +1061,20 @@ transition-property: all;
     height: 15px;
     position: relative;
     left: -15px;
-    top: -50px;
+    top: -30px;
        @include tablet{
         left: 180px;
+        top: 20px;
     }
     @include ordi{
         left: -780px;
         width: 400px;
         top: -30px;
-        padding-right: 20px;
-        padding-left: 20px;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    @include mobile5{
+        left: -40px;
     }
     
 }
@@ -925,16 +1097,20 @@ transition-property: all;
     height: 15px;
     position: relative;
     left: -15px;
-    top: -50px;
+    top: -30px;
        @include tablet{
         left: 180px;
+        top: 20px;
     }
     @include ordi{
         left: -840px;
         width: 400px;
         top: -30px;
-        padding-right: 20px;
-        padding-left: 20px;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    @include mobile5{
+        left: -40px;
     }
     
 }
@@ -954,51 +1130,75 @@ transition-property: all;
     width: 200px;
     height: 15px;
     position: relative;
-    left: -15px;
+    left: -5px;
     top: -95px;
-    margin-top: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
   
        @include tablet{
         left: 180px;
+        top: -50px;
     }
     @include ordi{
         left: -840px;
         width: 400px;
-        top: -30px;
-        padding-right: 20px;
-        padding-left: 20px;
+        top: -70px;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    @include mobile5{
+        left: -40px;
     }
     
 }
 
 .menufooter{
     position: relative;
-    top: -80px;
-    height: 200px;
-    margin-bottom: -80px;
-    margin-top: -50px;
+    top: -100px;
+    height: 250px;
+    margin-bottom: -100px;
+    margin-top: -80px;
+    @include ordi{ height: 180px;}
 
     h6{
-        @include tablet{
-        position: relative;
-        left: -10px;
+        @include mobile{top: 40px;}
     }
+
+    ul{
+        position: relative;
+        top: 20px;
+        li{
+        @include ordi{
+            font-size: 20px;
+        }}
     }
 
 }
 
+
+
 .menufooter4{
     position: relative;
-    top: -80px;
-    height: 200px;
-    margin-bottom: -80px;
-    margin-top: -30px;
+    top: -70px;
+    height: 250px;
+    margin-bottom: -100px;
+    margin-top: -80px;
+    @include ordi{ height: 180px;}
 
     h6{
+        @include mobile{top: 40px;}
         @include tablet{
         position: relative;
         left: -10px;
     }
+    }
+
+    ul{
+        position: relative;
+        top: 20px;
+        @include ordi{
+            font-size: 20px;
+        }
     }
 
 }

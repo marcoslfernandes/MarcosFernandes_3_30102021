@@ -35,7 +35,7 @@ html, body {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: gray;
+  background: #9c9a9a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,8 +45,8 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  opacity: 90%;
   z-index: 100;
+  opacity: 90%;
   -webkit-animation: loader 3s;
           animation: loader 3s;
   visibility: hidden;
@@ -72,7 +72,7 @@ html, body {
 
 .load {
   position: relative;
-  right: 530px;
+  right: 550px;
   bottom: 300px;
   z-index: 105;
 }
@@ -128,11 +128,34 @@ header {
 header h1 {
   font-family: "Shrikhand-Regular";
   position: relative;
+  -webkit-box-shadow: 5px 5px 5px #bdbbbb;
+          box-shadow: 5px 5px 5px #bdbbbb;
+  height: 10px;
+  width: 450px;
+  padding-bottom: 40px;
+  bottom: 10px;
+  right: 10px;
+  text-align: center;
+}
+
+@media screen and (max-width: 375px) {
+  header h1 {
+    right: 40px;
+  }
 }
 
 @media screen and (min-width: 768px) {
   header h1 {
     font-size: 40px;
+    height: 50px;
+    width: 800px;
+    padding-top: 10px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  header h1 {
+    width: 1500px;
   }
 }
 
@@ -143,8 +166,34 @@ header .back-header {
 
 @media screen and (max-width: 767px) {
   header .back-header {
-    width: 375px;
+    right: 5px;
+    width: 410px;
     height: 350px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  header .back-header {
+    right: 15px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  header .back-header {
+    left: -30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header .back-header {
+    right: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  header .back-header {
+    width: 1500px;
   }
 }
 
@@ -166,15 +215,16 @@ header #local {
     padding-bottom: 20px;
     position: relative;
     right: 30px;
-    bottom: 10px;
+    bottom: 30px;
     padding-top: 20px;
   }
 }
 
 @media screen and (min-width: 768px) {
   header #local {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    bottom: 35px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     font-size: 25px;
   }
 }
@@ -182,6 +232,8 @@ header #local {
 @media screen and (min-width: 992px) {
   header #local {
     height: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
@@ -199,9 +251,15 @@ header h2 {
 
 @media screen and (max-width: 767px) {
   header h2 {
-    left: 60px;
-    top: 10px;
+    left: 70px;
+    top: 2px;
     width: 250px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header h2 {
+    bottom: 20px;
   }
 }
 
@@ -209,6 +267,20 @@ header p {
   font-family: "Roboto Light";
   font-size: 20px;
   color: gray;
+  position: relative;
+}
+
+@media screen and (max-width: 320px) {
+  header p {
+    width: 300px;
+    right: -35px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header p {
+    top: -20px;
+  }
 }
 
 .buttton {
@@ -222,7 +294,6 @@ header p {
   position: relative;
   margin-left: 100px;
   margin-right: 100px;
-  border: solid;
   border-radius: 50px;
   width: 350px;
 }
@@ -238,7 +309,15 @@ header p {
 
 @media screen and (max-width: 767px) {
   .buttton {
-    left: -40px;
+    left: -20px;
+    top: 10px;
+    width: 270px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .buttton {
+    left: -50px;
     top: 10px;
     width: 270px;
   }
@@ -254,7 +333,7 @@ header p {
 
 @media screen and (min-width: 992px) {
   .buttton {
-    left: 470px;
+    left: 520px;
   }
 }
 
@@ -266,7 +345,7 @@ h3 {
 
 @media screen and (max-width: 767px) {
   h3 {
-    left: 20px;
+    left: 30px;
   }
 }
 
@@ -320,6 +399,12 @@ section .filtre-container {
             flex-direction: column;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    left: 60px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  section .filtre-container {
     left: 40px;
   }
 }
@@ -350,11 +435,12 @@ section .filtre {
   font-family: "Roboto Bold";
   font-size: 14px;
   background-color: #f5f1f1;
-  -webkit-box-shadow: 10px 10px 10px #dddada;
-          box-shadow: 10px 10px 10px #dddada;
+  -webkit-box-shadow: 5px 5px 5px #dbd9d9;
+          box-shadow: 5px 5px 5px #dbd9d9;
   border-radius: 20px;
   padding-top: 25px;
   padding-bottom: 25px;
+  margin-top: 15px;
   margin-bottom: 10px;
   width: 150px;
   height: 30px;
@@ -362,6 +448,12 @@ section .filtre {
   padding-right: 70px;
   position: relative;
   right: 20px;
+}
+
+@media screen and (max-width: 320px) {
+  section .filtre {
+    width: 100px;
+  }
 }
 
 section .number {
@@ -386,12 +478,24 @@ section .texte-filtre {
   font-size: 18px;
 }
 
+@media screen and (max-width: 320px) {
+  section .texte-filtre {
+    right: 50px;
+  }
+}
+
 section .fa-mobile-alt {
   color: gray;
   font-size: 20px;
   position: relative;
   right: 80px;
   top: 10px;
+}
+
+@media screen and (max-width: 320px) {
+  section .fa-mobile-alt {
+    right: 120px;
+  }
 }
 
 section .fa-list-ul {
@@ -402,6 +506,12 @@ section .fa-list-ul {
   top: 10px;
 }
 
+@media screen and (max-width: 320px) {
+  section .fa-list-ul {
+    right: 120px;
+  }
+}
+
 section .fa-store {
   color: gray;
   font-size: 20px;
@@ -410,13 +520,19 @@ section .fa-store {
   top: 10px;
 }
 
+@media screen and (max-width: 320px) {
+  section .fa-store {
+    right: 120px;
+  }
+}
+
 main {
   background-color: #f5f1f1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  padding-bottom: 50px;
+  padding-bottom: 70px;
 }
 
 main a {
@@ -463,8 +579,22 @@ figure {
 
 @media screen and (max-width: 767px) {
   figure {
+    width: 360px;
+    right: 10px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  figure {
+    left: -20px;
     width: 340px;
-    right: 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  figure {
+    left: -30px;
+    width: 300px;
   }
 }
 
@@ -494,7 +624,20 @@ figure img {
 @media screen and (max-width: 767px) {
   figure img {
     height: 200px;
+    width: 360px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  figure img {
+    height: 200px;
     width: 340px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  figure img {
+    width: 300px;
   }
 }
 
@@ -582,7 +725,21 @@ figcaption {
 @media screen and (max-width: 767px) {
   .new {
     bottom: 250px;
+    left: 270px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .new {
+    bottom: 250px;
     left: 250px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .new {
+    bottom: 250px;
+    left: 200px;
   }
 }
 
@@ -605,7 +762,8 @@ figcaption {
   font-size: 20px;
   position: relative;
   padding-left: 10px;
-  padding-top: 5px;
+  padding-top: 10px;
+  top: 5px;
 }
 
 @media screen and (min-width: 992px) {
@@ -618,6 +776,8 @@ figcaption {
   font-family: "Roboto Light";
   font-size: 18px;
   padding-top: 5px;
+  position: relative;
+  top: 5px;
   position: relative;
   left: 10px;
 }
@@ -635,7 +795,14 @@ figcaption {
 
 @media screen and (max-width: 767px) {
   .fa-heart {
-    left: 300px;
+    left: 360px;
+    bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .fa-heart {
+    left: 330px;
     bottom: 20px;
   }
 }
@@ -663,7 +830,14 @@ figcaption {
 @media screen and (max-width: 767px) {
   .firstheart {
     left: 300px;
-    bottom: 20px;
+    bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .firstheart {
+    left: 250px;
+    bottom: 40px;
   }
 }
 
@@ -696,7 +870,14 @@ figcaption {
 @media screen and (max-width: 767px) {
   .secondheart {
     left: 300px;
-    bottom: 20px;
+    bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .secondheart {
+    left: 250px;
+    bottom: 40px;
   }
 }
 
@@ -717,13 +898,13 @@ figcaption {
 
 footer {
   position: relative;
-  background-color: #3b3a3a;
+  background-color: #3a3939;
 }
 
 @media screen and (max-width: 767px) {
   footer {
-    top: 30px;
-    height: 180px;
+    top: 20px;
+    height: 200px;
   }
 }
 
@@ -788,6 +969,7 @@ ul li {
   list-style: none;
   font-family: "Roboto Light";
   font-size: 18px;
+  margin-bottom: 10px;
   color: #FFF;
 }
 
@@ -807,12 +989,18 @@ ul li {
 .fa-arrow-left {
   position: relative;
   font-size: 25px;
-  right: 50px;
+  right: 90px;
 }
 
 @media screen and (min-width: 992px) {
   .fa-arrow-left {
     right: 80px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .fa-arrow-left {
+    right: 50px;
   }
 }
 
@@ -823,14 +1011,30 @@ ul li {
 
 .menu h1 {
   position: relative;
-  padding-top: 10px;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .menu h1 {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .menu h1 {
+    right: 70px;
+  }
 }
 
 .menu img {
   position: relative;
   right: 20px;
-  bottom: 10px;
-  width: 400px;
+  bottom: 30px;
+  width: 440px;
+  height: 300px;
 }
 
 @media screen and (min-width: 768px) {
@@ -851,24 +1055,30 @@ ul li {
 
 .menumain {
   position: relative;
-  top: -60px;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  height: 1350px;
+  top: -95px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  height: 1400px;
 }
 
 @media screen and (min-width: 992px) {
   .menumain {
     height: 420px;
-    width: 1300px;
-    left: 70px;
+    width: 1350px;
+    left: 50px;
   }
 }
 
 .menumain h4 {
   font-family: "Shrikhand-Regular";
   font-size: 25px;
-  padding-left: 10px;
+  padding-left: 30px;
+}
+
+@media screen and (max-width: 375px) {
+  .menumain h4 {
+    padding-left: 20px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -887,6 +1097,12 @@ ul li {
 .menumain .fa-heart {
   position: relative;
   bottom: 65px;
+}
+
+@media screen and (max-width: 320px) {
+  .menumain .fa-heart {
+    left: 280px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -910,6 +1126,18 @@ ul li {
   padding-bottom: 10px;
   left: 10px;
   bottom: 70px;
+}
+
+@media screen and (max-width: 767px) {
+  .menumain h5 {
+    left: 40px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .menumain h5 {
+    left: 20px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -990,7 +1218,7 @@ ul li {
           flex-direction: column;
   position: relative;
   bottom: 80px;
-  left: 10px;
+  left: 35px;
   margin-bottom: 20px;
   background-color: #FFF;
   width: 340px;
@@ -1022,8 +1250,27 @@ ul li {
   left: 200px;
 }
 
+@media screen and (max-width: 320px) {
+  .menumain .choix:hover .boldnum {
+    left: 180px;
+  }
+}
+
 .menumain .choix:hover .boldplat {
   width: 190px;
+}
+
+@media screen and (max-width: 375px) {
+  .menumain .choix {
+    left: 15px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .menumain .choix {
+    left: 10px;
+    width: 300px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1062,6 +1309,7 @@ ul li {
 
 .fa-check-circle {
   position: absolute;
+  font-size: 20px;
   top: 30px;
   right: 32px;
   color: #FFF;
@@ -1072,7 +1320,8 @@ ul li {
   font-size: 20px;
   position: relative;
   padding-left: 10px;
-  padding-top: 5px;
+  padding-top: 10px;
+  top: 5px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1085,10 +1334,18 @@ ul li {
   cursor: pointer;
 }
 
+@media screen and (max-width: 320px) {
+  .boldplat {
+    font-size: 18px;
+  }
+}
+
 .simpleplat {
   font-family: "Roboto Light";
   font-size: 18px;
   padding-top: 5px;
+  position: relative;
+  top: 5px;
   padding: 10px;
   font-size: 15px;
   height: 10px;
@@ -1105,16 +1362,23 @@ ul li {
   cursor: pointer;
 }
 
+@media screen and (max-width: 320px) {
+  .simpleplat {
+    font-size: 13px;
+  }
+}
+
 .boldnum {
   font-family: "Roboto Bold";
   font-size: 20px;
   position: relative;
   padding-left: 10px;
-  padding-top: 5px;
+  padding-top: 10px;
+  top: 5px;
   font-size: 15px;
   position: absolute;
   left: 290px;
-  bottom: 10px;
+  top: 40px;
   -webkit-transition: all;
   transition: all;
   -webkit-transition-timing-function: ease-out;
@@ -1122,6 +1386,13 @@ ul li {
   -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
   cursor: pointer;
+}
+
+@media screen and (max-width: 320px) {
+  .boldnum {
+    left: 250px;
+    bottom: 18px;
+  }
 }
 
 .btn {
@@ -1135,15 +1406,14 @@ ul li {
   position: relative;
   margin-left: 100px;
   margin-right: 100px;
-  border: solid;
   border-radius: 50px;
   width: 350px;
   text-align: center;
   width: 200px;
   height: 15px;
   position: relative;
-  left: -15px;
-  top: -50px;
+  left: -5px;
+  top: -30px;
 }
 
 .btn:hover {
@@ -1158,6 +1428,13 @@ ul li {
 @media screen and (min-width: 768px) {
   .btn {
     left: 180px;
+    top: 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .btn {
+    left: -40px;
   }
 }
 
@@ -1166,8 +1443,8 @@ ul li {
     left: -820px;
     width: 400px;
     top: -30px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 40px;
+    padding-left: 40px;
   }
 }
 
@@ -1182,7 +1459,6 @@ ul li {
   position: relative;
   margin-left: 100px;
   margin-right: 100px;
-  border: solid;
   border-radius: 50px;
   width: 350px;
   text-align: center;
@@ -1190,7 +1466,7 @@ ul li {
   height: 15px;
   position: relative;
   left: -15px;
-  top: -50px;
+  top: -30px;
 }
 
 #btn2:hover {
@@ -1205,6 +1481,7 @@ ul li {
 @media screen and (min-width: 768px) {
   #btn2 {
     left: 180px;
+    top: 20px;
   }
 }
 
@@ -1213,8 +1490,14 @@ ul li {
     left: -780px;
     width: 400px;
     top: -30px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #btn2 {
+    left: -40px;
   }
 }
 
@@ -1229,7 +1512,6 @@ ul li {
   position: relative;
   margin-left: 100px;
   margin-right: 100px;
-  border: solid;
   border-radius: 50px;
   width: 350px;
   text-align: center;
@@ -1237,7 +1519,7 @@ ul li {
   height: 15px;
   position: relative;
   left: -15px;
-  top: -50px;
+  top: -30px;
 }
 
 #btn3:hover {
@@ -1252,6 +1534,7 @@ ul li {
 @media screen and (min-width: 768px) {
   #btn3 {
     left: 180px;
+    top: 20px;
   }
 }
 
@@ -1260,8 +1543,14 @@ ul li {
     left: -840px;
     width: 400px;
     top: -30px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #btn3 {
+    left: -40px;
   }
 }
 
@@ -1276,16 +1565,16 @@ ul li {
   position: relative;
   margin-left: 100px;
   margin-right: 100px;
-  border: solid;
   border-radius: 50px;
   width: 350px;
   text-align: center;
   width: 200px;
   height: 15px;
   position: relative;
-  left: -15px;
+  left: -5px;
   top: -95px;
-  margin-top: 10px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 #btn4:hover {
@@ -1300,6 +1589,7 @@ ul li {
 @media screen and (min-width: 768px) {
   #btn4 {
     left: 180px;
+    top: -50px;
   }
 }
 
@@ -1307,39 +1597,84 @@ ul li {
   #btn4 {
     left: -840px;
     width: 400px;
-    top: -30px;
-    padding-right: 20px;
-    padding-left: 20px;
+    top: -70px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #btn4 {
+    left: -40px;
   }
 }
 
 .menufooter {
   position: relative;
-  top: -80px;
-  height: 200px;
-  margin-bottom: -80px;
-  margin-top: -50px;
+  top: -100px;
+  height: 250px;
+  margin-bottom: -100px;
+  margin-top: -80px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
+  .menufooter {
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .menufooter h6 {
-    position: relative;
-    left: -10px;
+    top: 40px;
+  }
+}
+
+.menufooter ul {
+  position: relative;
+  top: 20px;
+}
+
+@media screen and (min-width: 992px) {
+  .menufooter ul li {
+    font-size: 20px;
   }
 }
 
 .menufooter4 {
   position: relative;
-  top: -80px;
-  height: 200px;
-  margin-bottom: -80px;
-  margin-top: -30px;
+  top: -70px;
+  height: 250px;
+  margin-bottom: -100px;
+  margin-top: -80px;
+}
+
+@media screen and (min-width: 992px) {
+  .menufooter4 {
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menufooter4 h6 {
+    top: 40px;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .menufooter4 h6 {
     position: relative;
     left: -10px;
+  }
+}
+
+.menufooter4 ul {
+  position: relative;
+  top: 20px;
+}
+
+@media screen and (min-width: 992px) {
+  .menufooter4 ul {
+    font-size: 20px;
   }
 }
 /*# sourceMappingURL=Style.css.map */

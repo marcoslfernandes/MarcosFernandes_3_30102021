@@ -23,7 +23,6 @@ padding-top: 20px;
 position: relative;
 margin-left: 100px;
 margin-right: 100px;
-border: solid;
 border-radius: 50px;
 width: 350px;
 }
@@ -32,10 +31,11 @@ width: 350px;
     font-family: $font-text-b;
     font-size: 14px;
     background-color: $second-background-color;
-    box-shadow: 10px 10px 10px $background-color;
+    box-shadow: 5px 5px 5px rgb(219, 217, 217);
     border-radius: 20px;
     padding-top: 25px;
     padding-bottom: 25px;
+    margin-top: 15px;
     margin-bottom: 10px;
     width: 150px;
     height: 30px;
@@ -95,13 +95,16 @@ width: 350px;
         font-size: 20px;
         position: relative;
         padding-left: 10px;
-        padding-top: 5px;
+        padding-top: 10px;
+        top: 5px;
     }
 
     @mixin caption-light{
         font-family: $font-text2;
         font-size: 18px;
         padding-top: 5px;
+        position: relative;
+        top: 5px;
     }
 
 
@@ -110,6 +113,10 @@ width: 350px;
 }}
 
 @mixin mobile{ @media screen and(max-width: 767px){@content}}
+
+@mixin mobile6{ @media screen and(max-width: 375px){@content}}
+
+@mixin mobile5{ @media screen and(max-width: 320px){@content}}
 
 @mixin tablet{@media screen and(min-width: 768px){@content}}
 
