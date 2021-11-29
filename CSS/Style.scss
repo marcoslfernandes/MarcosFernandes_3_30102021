@@ -235,7 +235,7 @@ a{
         @include mobile{
             left: -20px;
             top: 10px;
-            width: 270px;
+            width: 250px;
         }
 
         @include mobile5{
@@ -383,7 +383,8 @@ main{
                 top: 70px;}
                 @include ordi{
                     flex-direction: row;
-                    top: 70px;
+                    top: 80px;
+                   
                 padding-bottom: 100px;}                     
 
 }
@@ -441,6 +442,58 @@ img{
     }
 }
 
+}
+
+.heartanimation{
+  
+    width: 5px;
+    height: 5px;
+    @include mobile{
+        &:active{
+            .firstheart, .thirdheart{
+    
+                display: none;
+            }
+
+          
+
+            .secondheart, .forthheart{
+                visibility: visible;
+                opacity: 1;
+                transition: opacity 0.3s, visibility 0.3s;
+                transition-timing-function: ease-out;
+                transition-duration: 3500ms;
+                }
+        }}
+        @include tablet{
+            &:active{
+                .firstheart{
+        
+                    display: none;
+                }
+                .secondheart{
+                    visibility: visible;
+                    opacity: 1;
+                    transition: opacity 0.3s, visibility 0.3s;
+                    transition-timing-function: ease-out;
+                    transition-duration: 3500ms;
+                    }
+            }}
+        @include ordi{
+            &:hover{
+                .firstheart{
+        
+                    display: none;
+                }
+                .secondheart{
+                    visibility: visible;
+                    opacity: 1;
+                    transition: opacity 0.3s, visibility 0.3s;
+                    transition-timing-function: ease-out;
+                    transition-duration: 3500ms;
+                    }
+            }
+        }
 }
 
 figcaption{
@@ -506,21 +559,21 @@ figcaption{
     padding-top: 5px;
     padding-bottom: 5px;
     @include mobile{
-        bottom: 250px;
+        bottom: 220px;
         left: 270px;
     }
 
     @include mobile6{
-        bottom: 250px;
+        bottom: 220px;
         left: 250px;
     }
 
     @include mobile5{
-        bottom: 250px;
+        bottom: 220px;
         left: 200px;
     }
     @include tablet{
-        bottom: 250px;
+        bottom: 220px;
         left: 250px;
     }
 
@@ -544,6 +597,7 @@ figcaption{
     @include caption-light;
     position: relative;
     left: 10px;
+
     @include ordi{
         font-size: 12px;
     }
@@ -551,7 +605,7 @@ figcaption{
 
 
 
-.fa-heart{
+.thirdheart{
 position: relative;
 font-size: 30px;
 
@@ -576,17 +630,25 @@ font-size: 20px;
 }
 }
 
-.firstheart{
+.forthheart{
     position: relative;
     font-size: 30px;
+    visibility: hidden;
+    opacity: 0;
+    color: transparent;
+    background: linear-gradient(to bottom right,$secondary-color,$primary-color);
+    -webkit-background-clip: text;
+    
     @include mobile{
-        left: 300px;
-    bottom: 40px;
+        left: 360px;
+    bottom: 20px;
     }
-    @include mobile5{
-        left: 250px;
-    bottom: 40px;
+    
+    @include mobile6{
+        left: 330px;
+    bottom: 20px;
     }
+    
     @include tablet{
         left: 300px;
     bottom: 50px;
@@ -598,32 +660,64 @@ font-size: 20px;
     }
     }
 
+.firstheart{
+    position: relative;
+    font-size: 30px;
+    @include mobile{
+        left: 350px;
+    bottom: 60px;
+    }
+    @include mobile6{
+        left: 320px;
+    }
+    @include mobile5{
+        left: 270px;
+    bottom: 60px;
+    }
+    @include tablet{
+        left: 500px;
+    bottom: 60px;
+    }
+    @include ordi{
+        left: -30px;
+    bottom: -225px;
+    font-size: 20px;
+    }
+    }
+
+
+   
+
     .secondheart{
         position: relative;
         font-size: 30px;
-        visibility: hidden;
-        opacity: 0;
+        visibility: visible;
+     opacity: 0;
         color: transparent;
         background: linear-gradient(to bottom right,$secondary-color,$primary-color);
         -webkit-background-clip: text;
+        
 
-        @include mobile{
-            left: 300px;
-        bottom: 40px;
-        }
-        @include mobile5{
-            left: 250px;
-        bottom: 40px;
-        }
-        @include tablet{
-            left: 300px;
-        bottom: 50px;
-        }
-        @include ordi{
-            left: 150px;
-        bottom: 30px;
-        font-size: 20px;
-        }
+         @include mobile{
+        left: 350px;
+    bottom: 60px;
+    }
+    @include mobile6{
+        left: 320px;
+    }
+    @include mobile5{
+        left: 270px;
+    bottom: 60px;
+    }
+    @include tablet{
+        left: 500px;
+    bottom: 60px;
+    }
+    @include ordi{
+        left: -30px;
+    bottom: -225px;
+    font-size: 20px;
+    }
         }
 
 
@@ -644,6 +738,7 @@ font-size: 20px;
             top: 30px;
             height: 120px;
             }
+            
     }
 
     h6{
@@ -665,7 +760,8 @@ font-size: 20px;
                  }
     }
 
-    ul{
+    ul{a{text-decoration: none;
+    color: #FFF;}
         display: flex;
         justify-content: space-around;
         position: relative;
@@ -1025,7 +1121,7 @@ transition-property: all;
     width: 200px;
     height: 15px;
     position: relative;
-    left: -5px;
+    left: 8px;
     top: -30px;
        @include tablet{
         left: 180px;
@@ -1060,7 +1156,7 @@ transition-property: all;
     width: 200px;
     height: 15px;
     position: relative;
-    left: -15px;
+    left: 8px;
     top: -30px;
        @include tablet{
         left: 180px;
@@ -1096,7 +1192,7 @@ transition-property: all;
     width: 200px;
     height: 15px;
     position: relative;
-    left: -15px;
+    left: 8px;
     top: -30px;
        @include tablet{
         left: 180px;
@@ -1130,7 +1226,7 @@ transition-property: all;
     width: 200px;
     height: 15px;
     position: relative;
-    left: -5px;
+    left: 8px;
     top: -95px;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -1165,6 +1261,8 @@ transition-property: all;
     }
 
     ul{
+
+        a{text-decoration: none;}
         position: relative;
         top: 20px;
         li{
@@ -1194,6 +1292,7 @@ transition-property: all;
     }
 
     ul{
+        a{text-decoration: none;}
         position: relative;
         top: 20px;
         @include ordi{

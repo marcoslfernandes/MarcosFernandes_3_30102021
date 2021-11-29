@@ -160,7 +160,7 @@ header h1 {
 }
 
 header .back-header {
-  background-color: #f5f1f1;
+  background-color: #f5f3f3;
   position: relative;
 }
 
@@ -204,7 +204,7 @@ header a {
 
 header #local {
   font-family: "Roboto";
-  background-color: #dddada;
+  background-color: #e9e6e6;
   text-align: center;
   position: relative;
 }
@@ -292,7 +292,7 @@ header p {
   padding-bottom: 20px;
   padding-top: 20px;
   position: relative;
-  margin-left: 100px;
+  margin-left: 90px;
   margin-right: 100px;
   border-radius: 50px;
   width: 350px;
@@ -311,7 +311,7 @@ header p {
   .buttton {
     left: -20px;
     top: 10px;
-    width: 270px;
+    width: 250px;
   }
 }
 
@@ -434,7 +434,7 @@ section .filtre-container {
 section .filtre {
   font-family: "Roboto Bold";
   font-size: 14px;
-  background-color: #f5f1f1;
+  background-color: #f5f3f3;
   -webkit-box-shadow: 5px 5px 5px #dbd9d9;
           box-shadow: 5px 5px 5px #dbd9d9;
   border-radius: 20px;
@@ -486,9 +486,9 @@ section .texte-filtre {
 
 section .fa-mobile-alt {
   color: gray;
-  font-size: 20px;
+  font-size: 23px;
   position: relative;
-  right: 80px;
+  right: 100px;
   top: 10px;
 }
 
@@ -500,9 +500,9 @@ section .fa-mobile-alt {
 
 section .fa-list-ul {
   color: gray;
-  font-size: 20px;
+  font-size: 23px;
   position: relative;
-  right: 80px;
+  right: 100px;
   top: 10px;
 }
 
@@ -514,9 +514,9 @@ section .fa-list-ul {
 
 section .fa-store {
   color: gray;
-  font-size: 20px;
+  font-size: 23px;
   position: relative;
-  right: 80px;
+  right: 100px;
   top: 10px;
 }
 
@@ -527,7 +527,7 @@ section .fa-store {
 }
 
 main {
-  background-color: #f5f1f1;
+  background-color: #f5f3f3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -566,7 +566,7 @@ main a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    top: 70px;
+    top: 80px;
     padding-bottom: 100px;
   }
 }
@@ -655,6 +655,59 @@ figure img {
   }
 }
 
+.heartanimation {
+  width: 5px;
+  height: 5px;
+}
+
+@media screen and (max-width: 767px) {
+  .heartanimation:active .firstheart, .heartanimation:active .thirdheart {
+    display: none;
+  }
+  .heartanimation:active .secondheart, .heartanimation:active .forthheart {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: opacity 0.3s, visibility 0.3s;
+    transition: opacity 0.3s, visibility 0.3s;
+    -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+    -webkit-transition-duration: 3500ms;
+            transition-duration: 3500ms;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .heartanimation:active .firstheart {
+    display: none;
+  }
+  .heartanimation:active .secondheart {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: opacity 0.3s, visibility 0.3s;
+    transition: opacity 0.3s, visibility 0.3s;
+    -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+    -webkit-transition-duration: 3500ms;
+            transition-duration: 3500ms;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .heartanimation:hover .firstheart {
+    display: none;
+  }
+  .heartanimation:hover .secondheart {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: opacity 0.3s, visibility 0.3s;
+    transition: opacity 0.3s, visibility 0.3s;
+    -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+    -webkit-transition-duration: 3500ms;
+            transition-duration: 3500ms;
+  }
+}
+
 figcaption {
   -webkit-transition: opacity 0.3s, visibility 0.3s;
   transition: opacity 0.3s, visibility 0.3s;
@@ -724,28 +777,28 @@ figcaption {
 
 @media screen and (max-width: 767px) {
   .new {
-    bottom: 250px;
+    bottom: 220px;
     left: 270px;
   }
 }
 
 @media screen and (max-width: 375px) {
   .new {
-    bottom: 250px;
+    bottom: 220px;
     left: 250px;
   }
 }
 
 @media screen and (max-width: 320px) {
   .new {
-    bottom: 250px;
+    bottom: 220px;
     left: 200px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .new {
-    bottom: 250px;
+    bottom: 220px;
     left: 250px;
   }
 }
@@ -763,7 +816,7 @@ figcaption {
   position: relative;
   padding-left: 10px;
   padding-top: 10px;
-  top: 5px;
+  bottom: 5px;
 }
 
 @media screen and (min-width: 992px) {
@@ -777,7 +830,7 @@ figcaption {
   font-size: 18px;
   padding-top: 5px;
   position: relative;
-  top: 5px;
+  bottom: 8px;
   position: relative;
   left: 10px;
 }
@@ -788,34 +841,74 @@ figcaption {
   }
 }
 
-.fa-heart {
+.thirdheart {
   position: relative;
   font-size: 30px;
 }
 
 @media screen and (max-width: 767px) {
-  .fa-heart {
+  .thirdheart {
     left: 360px;
     bottom: 20px;
   }
 }
 
 @media screen and (max-width: 375px) {
-  .fa-heart {
+  .thirdheart {
     left: 330px;
     bottom: 20px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .fa-heart {
+  .thirdheart {
     left: 300px;
     bottom: 50px;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .fa-heart {
+  .thirdheart {
+    left: 150px;
+    bottom: 30px;
+    font-size: 20px;
+  }
+}
+
+.forthheart {
+  position: relative;
+  font-size: 30px;
+  visibility: hidden;
+  opacity: 0;
+  color: transparent;
+  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+}
+
+@media screen and (max-width: 767px) {
+  .forthheart {
+    left: 360px;
+    bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .forthheart {
+    left: 330px;
+    bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .forthheart {
+    left: 300px;
+    bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .forthheart {
     left: 150px;
     bottom: 30px;
     font-size: 20px;
@@ -829,29 +922,35 @@ figcaption {
 
 @media screen and (max-width: 767px) {
   .firstheart {
-    left: 300px;
-    bottom: 40px;
+    left: 350px;
+    bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .firstheart {
+    left: 320px;
   }
 }
 
 @media screen and (max-width: 320px) {
   .firstheart {
-    left: 250px;
-    bottom: 40px;
+    left: 270px;
+    bottom: 60px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .firstheart {
-    left: 300px;
-    bottom: 50px;
+    left: 500px;
+    bottom: 60px;
   }
 }
 
 @media screen and (min-width: 992px) {
   .firstheart {
-    left: 150px;
-    bottom: 30px;
+    left: -30px;
+    bottom: -225px;
     font-size: 20px;
   }
 }
@@ -859,7 +958,7 @@ figcaption {
 .secondheart {
   position: relative;
   font-size: 30px;
-  visibility: hidden;
+  visibility: visible;
   opacity: 0;
   color: transparent;
   background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
@@ -869,29 +968,35 @@ figcaption {
 
 @media screen and (max-width: 767px) {
   .secondheart {
-    left: 300px;
-    bottom: 40px;
+    left: 350px;
+    bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .secondheart {
+    left: 320px;
   }
 }
 
 @media screen and (max-width: 320px) {
   .secondheart {
-    left: 250px;
-    bottom: 40px;
+    left: 270px;
+    bottom: 60px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .secondheart {
-    left: 300px;
-    bottom: 50px;
+    left: 500px;
+    bottom: 60px;
   }
 }
 
 @media screen and (min-width: 992px) {
   .secondheart {
-    left: 150px;
-    bottom: 30px;
+    left: -30px;
+    bottom: -225px;
     font-size: 20px;
   }
 }
@@ -946,6 +1051,11 @@ ul {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   position: relative;
+}
+
+ul a {
+  text-decoration: none;
+  color: #FFF;
 }
 
 @media screen and (max-width: 767px) {
@@ -1321,7 +1431,7 @@ ul li {
   position: relative;
   padding-left: 10px;
   padding-top: 10px;
-  top: 5px;
+  bottom: 5px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1345,7 +1455,7 @@ ul li {
   font-size: 18px;
   padding-top: 5px;
   position: relative;
-  top: 5px;
+  bottom: 8px;
   padding: 10px;
   font-size: 15px;
   height: 10px;
@@ -1374,7 +1484,7 @@ ul li {
   position: relative;
   padding-left: 10px;
   padding-top: 10px;
-  top: 5px;
+  bottom: 5px;
   font-size: 15px;
   position: absolute;
   left: 290px;
@@ -1404,7 +1514,7 @@ ul li {
   padding-bottom: 20px;
   padding-top: 20px;
   position: relative;
-  margin-left: 100px;
+  margin-left: 90px;
   margin-right: 100px;
   border-radius: 50px;
   width: 350px;
@@ -1412,7 +1522,7 @@ ul li {
   width: 200px;
   height: 15px;
   position: relative;
-  left: -5px;
+  left: 8px;
   top: -30px;
 }
 
@@ -1457,7 +1567,7 @@ ul li {
   padding-bottom: 20px;
   padding-top: 20px;
   position: relative;
-  margin-left: 100px;
+  margin-left: 90px;
   margin-right: 100px;
   border-radius: 50px;
   width: 350px;
@@ -1465,7 +1575,7 @@ ul li {
   width: 200px;
   height: 15px;
   position: relative;
-  left: -15px;
+  left: 8px;
   top: -30px;
 }
 
@@ -1510,7 +1620,7 @@ ul li {
   padding-bottom: 20px;
   padding-top: 20px;
   position: relative;
-  margin-left: 100px;
+  margin-left: 90px;
   margin-right: 100px;
   border-radius: 50px;
   width: 350px;
@@ -1518,7 +1628,7 @@ ul li {
   width: 200px;
   height: 15px;
   position: relative;
-  left: -15px;
+  left: 8px;
   top: -30px;
 }
 
@@ -1563,7 +1673,7 @@ ul li {
   padding-bottom: 20px;
   padding-top: 20px;
   position: relative;
-  margin-left: 100px;
+  margin-left: 90px;
   margin-right: 100px;
   border-radius: 50px;
   width: 350px;
@@ -1571,7 +1681,7 @@ ul li {
   width: 200px;
   height: 15px;
   position: relative;
-  left: -5px;
+  left: 8px;
   top: -95px;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -1634,6 +1744,10 @@ ul li {
   top: 20px;
 }
 
+.menufooter ul a {
+  text-decoration: none;
+}
+
 @media screen and (min-width: 992px) {
   .menufooter ul li {
     font-size: 20px;
@@ -1670,6 +1784,10 @@ ul li {
 .menufooter4 ul {
   position: relative;
   top: 20px;
+}
+
+.menufooter4 ul a {
+  text-decoration: none;
 }
 
 @media screen and (min-width: 992px) {

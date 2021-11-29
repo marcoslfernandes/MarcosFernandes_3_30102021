@@ -21,7 +21,7 @@ background-image: linear-gradient(to bottom right,$secondary-color,$primary-colo
 padding-bottom: 20px;
 padding-top: 20px;
 position: relative;
-margin-left: 100px;
+margin-left: 90px;
 margin-right: 100px;
 border-radius: 50px;
 width: 350px;
@@ -61,9 +61,9 @@ width: 350px;
 
 @mixin icon-config{
     color: gray;
-    font-size: 20px;
+    font-size: 23px;
     position: relative;
-    right: 80px;
+    right: 100px;
     top: 10px;
 }
 
@@ -96,7 +96,7 @@ width: 350px;
         position: relative;
         padding-left: 10px;
         padding-top: 10px;
-        top: 5px;
+        bottom: 5px;
     }
 
     @mixin caption-light{
@@ -104,7 +104,7 @@ width: 350px;
         font-size: 18px;
         padding-top: 5px;
         position: relative;
-        top: 5px;
+        bottom: 8px;
     }
 
 
