@@ -1,3 +1,31 @@
+/* Accueil */
+
+@mixin loaderblock-config{position: fixed;
+    width: 100%;
+ height: 100%;
+    background: rgb(156, 154, 154);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    opacity: 90%;
+ animation: loader 3s;
+ visibility: hidden;}
+
+ @mixin circle-config{
+    position: relative;
+    left: 550px;
+    top: 200px;
+    width: 100px;
+    height: 100px;
+    border: solid rgb(223, 220, 220);
+    border-top-color: #99E2D0;
+    border-width: 20px;
+    border-radius: 50%;
+    animation: rotateload 1000ms linear infinite;
+    z-index:  105;
+ }
+
 
 @mixin header-config{
     display: flex;
@@ -5,6 +33,16 @@
     flex-direction: column;
     text-align: center;
 }
+
+@mixin h1-config{font-family: $logofont;
+    position: relative;
+    box-shadow: 5px 5px 5px rgb(189, 187, 187);
+    height: 10px;
+    width: 450px;
+    padding-bottom: 40px;
+    bottom: 10px;
+    right: 10px;
+    text-align: center;}
 
 @mixin icon-local {
     font-family: $font-text1;
@@ -78,6 +116,13 @@ width: 350px;
         
     }
 
+    @mixin main-config{
+        background-color: $second-background-color;
+        display: flex;
+        position: relative;
+        padding-bottom: 70px;
+    }
+
     @mixin fig-config {
         background-color: #FFF;
         border-radius: 15px;
@@ -88,6 +133,18 @@ width: 350px;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
         object-fit: cover;
+    }
+
+    @mixin new-config{
+        font-family: $font-text-b;
+    font-size: 14px;
+    position: absolute;
+    background-color: $third-color;
+    color: #0a9774;
+    width: 70px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     }
 
     @mixin caption-bold{
@@ -107,6 +164,105 @@ width: 350px;
         bottom: 8px;
     }
 
+    @mixin hidden-heart-config{
+        position: relative;
+        font-size: 30px;
+        visibility: hidden;
+     opacity: 0;
+        color: transparent;
+        background: linear-gradient(to bottom right,$secondary-color,$primary-color);
+        -webkit-background-clip: text;
+    }
+
+/* Menus */
+
+@mixin menumain-config{
+    position: relative;
+    top: -95px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    height: 1400px;
+
+}
+
+@mixin h4-config{
+    font-family: $logofont;
+    font-size: 25px;
+    padding-left: 35px;
+    padding-bottom: 10px;
+}
+
+@mixin h5-config{
+    font-family: $font-text2;
+    font-size: 18px;
+    border-bottom: solid $third-color;
+    width: 50px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+@mixin choix-config { display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 80px;
+    left: 35px;
+margin-bottom: 20px;
+background-color: #FFF;
+width: 340px;
+height: 70px;
+border-radius: 15px;
+padding-top: 10px;
+overflow: hidden;
+transition-property: all;
+    
+}
+
+@mixin border-anim-config{
+    position: absolute;
+    right: -100px;
+    width: 30px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+      height: 80px;
+    margin-left: 15px;
+    padding-left: 50px;
+    top:-1px;
+    background-color: $third-color;
+    transition: all;
+    transition-timing-function: ease-out;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+@mixin text-anim{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all;
+    transition-timing-function: ease-out;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+@mixin boldnum-config{
+    font-size: 15px;
+    position: absolute;
+    left: 290px;
+    top: 40px;
+    transition: all;
+    transition-timing-function: ease-out;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+@mixin menufooter-config{
+    position: relative;
+    height: 250px;
+    margin-bottom: -100px;
+    margin-top: -80px;
+}
+
+/* Responsive */
 
 @mixin ordi{ @media screen and(min-width: 992px) {@content
     
