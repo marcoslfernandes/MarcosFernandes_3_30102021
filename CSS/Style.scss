@@ -788,9 +788,7 @@ figcaption{
     }
 
     img{
-        position: relative;
-        right: 20px;
-        bottom: 30px;
+       align-self: center;
         width: 440px;
         height: 300px;
         @include tablet{
@@ -813,8 +811,7 @@ figcaption{
    @include menumain-config;
     @include ordi{
         height: 420px;
-        width: 1350px;
-        left: 50px;
+        width: 100%;
     }
 
 
@@ -1019,7 +1016,7 @@ animation-delay: 100ms;
         left: -40px;
     }
     @include ordi{
-        left: -820px;
+        left: -760px;
         width: 400px;
         top: -30px;
         padding-right: 40px;

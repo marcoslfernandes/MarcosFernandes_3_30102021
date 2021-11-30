@@ -1155,9 +1155,9 @@ ul li {
 }
 
 .menu img {
-  position: relative;
-  right: 20px;
-  bottom: 30px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   width: 440px;
   height: 300px;
 }
@@ -1189,8 +1189,7 @@ ul li {
 @media screen and (min-width: 992px) {
   .menumain {
     height: 420px;
-    width: 1350px;
-    left: 50px;
+    width: 100%;
   }
 }
 
@@ -1543,7 +1542,7 @@ ul li {
 
 @media screen and (min-width: 992px) {
   .btn {
-    left: -820px;
+    left: -760px;
     width: 400px;
     top: -30px;
     padding-right: 40px;
