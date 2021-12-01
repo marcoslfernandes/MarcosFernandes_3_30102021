@@ -32,6 +32,7 @@
     padding-left: 5px;
     flex-direction: column;
     text-align: center;
+    width: 102%;
 }
 
 @mixin h1-config{font-family: $logofont;
@@ -182,6 +183,7 @@ width: 350px;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     height: 1400px;
+
 
 }
 

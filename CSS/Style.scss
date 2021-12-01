@@ -2,38 +2,6 @@
 @import "./Outils/Mixins";
 @import "./Outils/Bases";
 
-@font-face {
-    font-family: 'Shrikhand-Regular';
-    src: url('Shrikhand-Regular.eot');
-    src: url('Shrikhand-Regular') format('embedded-opentype'),
-         url('Shrikhand-Regular.woff') format('woff'),
-         url('Shrikhand-Regular.ttf') format('truetype'),
-         url('Shrikhand-Regular.svg#cac_Raleway') format('svg');}
-
-@font-face {
-            font-family: 'Roboto';
-            src: url('Roboto-Regular.eot');
-            src: url('Roboto-Regular') format('embedded-opentype'),
-                 url('Roboto-Regular.woff') format('woff'),
-                 url('Roboto-Regular.ttf') format('truetype'),
-                 url('Roboto-Regular.svg#cac_Raleway') format('svg');}
-
-@font-face {
-            font-family: 'Roboto Bold';
-                src: url('Roboto-Bold.eot');
-                src: url('Roboto-Bold') format('embedded-opentype'),
-                         url('Roboto-Bold.woff') format('woff'),
-                         url('Roboto-Bold.ttf') format('truetype'),
-                         url('Roboto-Bold.svg#cac_Raleway') format('svg');}
-
-@font-face {
-            font-family: 'Roboto Light';
-                    src: url('Roboto-Light.eot');
-                    src: url('Roboto-Light') format('embedded-opentype'),
-                            url('Roboto-Light.woff') format('woff'),
-                            url('Roboto-Light.ttf') format('truetype'),
-                            url('Roboto-Light.svg#cac_Raleway') format('svg');}
-
 
 
 /* Accueil */
@@ -97,7 +65,7 @@ header{
     padding-top: 10px;
 }
 @include ordi{
-    width: 1500px;
+    width: 102%;
 }
 }
 .back-header{
@@ -123,7 +91,7 @@ header{
     }
 
     @include ordi{
-        width: 1500px;
+        width: 102%;
     }
     
 }
@@ -154,6 +122,7 @@ a{
     }
     @include ordi{
         height: 40px;
+        width: 102%;
         padding-top: 10px;
         padding-bottom: 10px;
     }
@@ -773,11 +742,14 @@ figcaption{
 .menu{
     position: relative;
     bottom: 30px;
+    width: 100%;
 
     h1{
         position: relative;
-        padding-top: 30px;
+        padding-top: 10px;
         padding-bottom: 40px;
+        position: relative;
+        top: 20px;
         @include tablet{
             box-shadow: none;
             height: 30px;
@@ -785,12 +757,15 @@ figcaption{
         @include mobile5{
             right: 70px;
         }
+        @include ordi{
+            align-self: center;
+        }
     }
 
     img{
        align-self: center;
         width: 440px;
-        height: 300px;
+        height: 320px;
         @include tablet{
             left: 180px;
             border-top-left-radius: 30px;
@@ -810,8 +785,10 @@ figcaption{
 .menumain{
    @include menumain-config;
     @include ordi{
+        position: relative;
+        left: 35px;
         height: 420px;
-        width: 100%;
+        width: 95%;
     }
 
 
@@ -871,6 +848,7 @@ h5{
 
 
 .entrees{
+
       animation: 1500ms ease-out 0s 1 menuslide;
  ;}
 
@@ -880,6 +858,7 @@ h5{
 ;}
 
 .desserts{
+    
     animation: 1500ms ease-out 0s 1 menuslide;
 animation-delay: 100ms;
 ;}
@@ -894,7 +873,7 @@ animation-delay: 100ms;
     right: 1px;
     
 }
-
+ 
 .fa-check-circle{
 
     transition: 800ms;
