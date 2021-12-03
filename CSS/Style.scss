@@ -58,6 +58,10 @@ header{
     right: 40px;
 }
 
+@include mobile5{
+    right: 65px;
+}
+
 @include tablet{
     font-size: 40px;
     height: 50px;
@@ -66,6 +70,7 @@ header{
 }
 @include ordi{
     width: 102%;
+    right: 50px;
 }
 }
 .back-header{
@@ -92,6 +97,7 @@ header{
 
     @include ordi{
         width: 102%;
+        right: 50px;
     }
     
 }
@@ -114,6 +120,9 @@ a{
         bottom: 30px;
         padding-top: 20px;
                           }
+    @include mobile5{
+        right: 40px;
+    }
          @include tablet{
              bottom: 35px;
         padding-top: 25px;
@@ -125,6 +134,7 @@ a{
         width: 102%;
         padding-top: 10px;
         padding-bottom: 10px;
+        right: 20px;
     }
 
     .fa-map-marker-alt
@@ -139,9 +149,16 @@ a{
     h2{
         @include htitre;
         @include mobile{
-            left: 70px;
+            left: 80px;
             top: 2px;
             width: 250px;
+        }
+        
+        @include mobile6{
+            left: 75px;
+        }
+        @include mobile5{
+            left: 55px;
         }
         @include tablet{
             bottom: 20px;
@@ -174,13 +191,17 @@ a{
         }
 
         @include mobile{
-            left: -20px;
+            left: -10px;
             top: 10px;
             width: 250px;
         }
 
+        @include mobile6{
+            left: -15px;
+        }
+
         @include mobile5{
-            left: -50px;
+            left: -40px;
             top: 10px;
             width: 270px;
         }
@@ -207,7 +228,7 @@ a{
             left: 300px;
         }
         @include ordi{
-            left: 640px;
+            left: 620px;
         }
     }
 
@@ -322,6 +343,7 @@ main{
                 @include ordi{
                     flex-direction: row;
                     top: 80px;
+                    right: 10px;
                    
                 padding-bottom: 100px;}                     
 
@@ -758,7 +780,7 @@ figcaption{
             right: 70px;
         }
         @include ordi{
-            align-self: center;
+            right: -15px;
         }
     }
 
@@ -995,7 +1017,7 @@ animation-delay: 100ms;
         left: -40px;
     }
     @include ordi{
-        left: -760px;
+        left: -790px;
         width: 400px;
         top: -30px;
         padding-right: 40px;
@@ -1027,7 +1049,7 @@ animation-delay: 100ms;
         top: 20px;
     }
     @include ordi{
-        left: -780px;
+        left: -765px;
         width: 400px;
         top: -30px;
         padding-right: 40px;
@@ -1063,7 +1085,7 @@ animation-delay: 100ms;
         top: 20px;
     }
     @include ordi{
-        left: -840px;
+        left: -820px;
         width: 400px;
         top: -30px;
         padding-right: 40px;
@@ -1100,7 +1122,7 @@ animation-delay: 100ms;
         top: -50px;
     }
     @include ordi{
-        left: -840px;
+        left: -830px;
         width: 400px;
         top: -70px;
         padding-right: 40px;
