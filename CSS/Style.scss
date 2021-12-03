@@ -54,6 +54,10 @@ header{
  h1{
 @include h1-config;
 
+@include mobile{
+    right: 20px;
+}
+
 @include mobile6{
     right: 40px;
 }
@@ -65,7 +69,7 @@ header{
 @include tablet{
     font-size: 40px;
     height: 50px;
-    width: 800px;
+    width: 820px;
     padding-top: 10px;
 }
 @include ordi{
@@ -181,7 +185,7 @@ a{
 
     .buttton{
         @include click-button;
-
+position: relative;
       
 
         &:hover{
@@ -207,7 +211,7 @@ a{
         }
 
         @include tablet{
-            left: 150px;
+            left: 180px;
             bottom: 10px;
             width: 270px;
         }
@@ -632,11 +636,12 @@ figcaption{
             
             @include mobile5{
                 left: 280px;
+                bottom: 75px;
             }
             
             @include tablet{
                 left: 550px;
-            bottom: 70px;
+            bottom: 80px;
             }
             @include ordi{
                 left: -80px;
@@ -660,11 +665,12 @@ figcaption{
             
                 @include mobile5{
                     left: 280px;
+                    bottom: 75px;
                 }
                 
                 @include tablet{
                     left: 550px;
-                bottom: 70px;
+                    bottom: 80px;
                 }
                 @include ordi{
                     left: -80px;
@@ -705,7 +711,7 @@ figcaption{
             text-align: center;
             position: relative;
             top: 10px;
-            left: 35px;
+            left: 5px;
                  }
     }
 
@@ -1010,7 +1016,7 @@ animation-delay: 100ms;
     left: 8px;
     top: -30px;
        @include tablet{
-        left: 180px;
+        left: 200px;
         top: 20px;
     }
     @include mobile5{
@@ -1045,7 +1051,7 @@ animation-delay: 100ms;
     left: 8px;
     top: -30px;
        @include tablet{
-        left: 180px;
+        left: 200px;
         top: 20px;
     }
     @include ordi{
@@ -1081,7 +1087,7 @@ animation-delay: 100ms;
     left: 8px;
     top: -30px;
        @include tablet{
-        left: 180px;
+        left: 200px;
         top: 20px;
     }
     @include ordi{
@@ -1118,7 +1124,7 @@ animation-delay: 100ms;
     margin-bottom: 40px;
   
        @include tablet{
-        left: 180px;
+        left: 200px;
         top: -50px;
     }
     @include ordi{
@@ -1140,7 +1146,9 @@ animation-delay: 100ms;
     @include ordi{ height: 180px;}
 
     h6{
+        position: relative;
         @include mobile{top: 40px;}
+      
     }
 
     ul{
