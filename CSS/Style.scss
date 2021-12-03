@@ -781,6 +781,7 @@ figcaption{
         @include tablet{
             box-shadow: none;
             height: 30px;
+            width: 100%;
         }
         @include mobile5{
             right: 70px;

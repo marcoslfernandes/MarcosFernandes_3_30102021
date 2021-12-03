@@ -1190,6 +1190,7 @@ ul li {
     -webkit-box-shadow: none;
             box-shadow: none;
     height: 30px;
+    width: 100%;
   }
 }
 
